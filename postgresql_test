@@ -56,7 +56,7 @@ CREATE OR REPLACE FUNCTION test_function1() RETURNS VOID AS $$
     SELECT DISTINCT COLUMN_NAME
     FROM information_schema.columns
     WHERE TABLE_NAME = ''%s''
-    AND COLUMN_NAME IN (''start'', ''end_'', ''id'', ''combinedrank'', ''num_sites'')
+    AND COLUMN_NAME IN (''start'', ''end_'', ''combinedrank'', ''num_sites'')
     AND data_type = ''text''
     ', current_table)
     LOOP
